@@ -92,6 +92,7 @@ function draw() {
   const startX = (width - totalWidth) / 2;
   let currentX = startX;
   let currentY = 140;
+  console.log(mouseX, mouseY);
 
   for (let i = 0; i < data.country.length; i++) {
     if (selectedCountry === "All" && data.country[i].Countries === "All") {
@@ -119,8 +120,8 @@ function draw() {
       ) {
         hoveredSquareIndex = i;
         const hoveredData = data.country[hoveredSquareIndex];
-        textSize(30);
-        const widthX = 1800;
+        textSize(18);
+        const widthX = 1300;
         if (hoveredData.ID === '1') {
           fill(255, 194, 0);
           text('VEHICLE', widthX, 150);
@@ -138,11 +139,11 @@ function draw() {
           text('WEAPONS', widthX, 150);
         } 
         fill(255);
-        text(`Date: ${hoveredData.Date}`, widthX, 200);
-        text(`Quantity: ${hoveredData.Quantity}`, widthX, 250);
-        text(`CurrentValue: ${hoveredData.CurrentValue}`, widthX, 300);
-        text(`AcquisitionValue: ${hoveredData.AcquisitionValue}`, widthX, 350);
-        text(`${hoveredData.Description}`, widthX, 400, 300);
+        text(`Date: ${hoveredData.Date}`, widthX, 180);
+        text(`Quantity: ${hoveredData.Quantity}`, widthX, 210);
+        text(`CurrentValue: ${hoveredData.CurrentValue}`, widthX, 240);
+        text(`AcquisitionValue: ${hoveredData.AcquisitionValue}`, widthX, 270);
+        text(`${hoveredData.Description}`, widthX, 300, 250);
       } 
       currentX += 27;
       if (currentX + 27 > startX + totalWidth) {
@@ -168,17 +169,17 @@ function draw() {
         } else if (data.country[i].ID === "5") {
           fill(119, 75, 221);
         }
-        rect(currentX, currentY, 14, 14);
+        rect(currentX, currentY, 10, 10);
         if (
           mouseX >= currentX &&
-          mouseX <= currentX + 14 &&
+          mouseX <= currentX + 10 &&
           mouseY >= currentY &&
-          mouseY <= currentY + 14
+          mouseY <= currentY + 10
         ) {
           hoveredSquareIndex = i;
           const hoveredData = data.country[hoveredSquareIndex];
-          textSize(30);
-          const widthX = 1800;
+          textSize(18);
+          const widthX = 1300;
           if (hoveredData.ID === '1') {
             fill(255, 194, 0);
             text('VEHICLE', widthX, 150);
@@ -197,17 +198,17 @@ function draw() {
           } 
           fill(255);
           rectMode(CENTER);
-          text(`${hoveredData.Countries}`, widthX, 200);
-          text(`Date: ${hoveredData.Date}`, widthX, 250);
-          text(`Quantity: ${hoveredData.Quantity}`, widthX, 300);
-          text(`CurrentValue: ${hoveredData.CurrentValue}`, widthX, 350);
-          text(`AcquisitionValue: ${hoveredData.AcquisitionValue}`, widthX, 400);
-          text(`${hoveredData.Description}`, widthX, 450, 300);
+          text(`${hoveredData.Countries}`, widthX, 180);
+          text(`Date: ${hoveredData.Date}`, widthX, 210);
+          text(`Quantity: ${hoveredData.Quantity}`, widthX, 240);
+          text(`CurrentValue: ${hoveredData.CurrentValue}`, widthX, 270);
+          text(`AcquisitionValue: ${hoveredData.AcquisitionValue}`, widthX, 300);
+          text(`${hoveredData.Description}`, widthX, 330, 250);
         } 
-        currentX += 15;
-        if (currentX + 15 > startX + totalWidth) {
+        currentX += 11;
+        if (currentX + 11 > startX + totalWidth) {
           currentX = startX;
-          currentY += 15;
+          currentY += 11;
         
       }
     }
