@@ -139,6 +139,7 @@ function draw() {
           text('WEAPONS', widthX, 150);
         } 
         fill(255);
+        rectMode(CENTER);
         text(`Date: ${hoveredData.Date}`, widthX, 180);
         text(`Quantity: ${hoveredData.Quantity}`, widthX, 210);
         text(`CurrentValue: ${hoveredData.CurrentValue}`, widthX, 240);
