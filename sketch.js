@@ -91,7 +91,7 @@ function draw() {
   const totalWidth = 22 * 40;
   const startX = (width - totalWidth) / 2;
   let currentX = startX;
-  let currentY = 140;
+  let currentY = 150;
   console.log(mouseX, mouseY);
 
   for (let i = 0; i < data.country.length; i++) {
@@ -121,7 +121,7 @@ function draw() {
         hoveredSquareIndex = i;
         const hoveredData = data.country[hoveredSquareIndex];
         textSize(18);
-        const widthX = 1300;
+        const widthX = 1400;
         if (hoveredData.ID === '1') {
           fill(255, 194, 0);
           text('VEHICLE', widthX, 150);
@@ -180,7 +180,7 @@ function draw() {
           hoveredSquareIndex = i;
           const hoveredData = data.country[hoveredSquareIndex];
           textSize(18);
-          const widthX = 1300;
+          const widthX = 1400;
           if (hoveredData.ID === '1') {
             fill(255, 194, 0);
             text('VEHICLE', widthX, 150);
